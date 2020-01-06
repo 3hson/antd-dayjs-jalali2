@@ -1,11 +1,11 @@
 {
-  "name": "jalaliday",
-  "version": "2.2.5",
-  "description": "Persian (Jalali, Khorshidi) Plugin for Day.js",
-  "main": "dist/jalaliday.cjs.min.js",
-  "web": "dist/jalaliday.umd.min.js",
-  "module": "dist/jalaliday.esm.js",
-  "jsnext:main": "dist/jalaliday.esm.js",
+  "name": "antd-dayjs-jalali",
+  "version": "1.0.3",
+  "description": "antd persian (Jalali, Khorshidi) Day.js calander",
+  "main": "dist/antd-dayjs-jalali.cjs.min.js",
+  "web": "dist/antd-dayjs-jalali.umd.min.js",
+  "module": "dist/antd-dayjs-jalali.esm.js",
+  "jsnext:main": "dist/antd-dayjs-jalali.esm.js",
   "scripts": {
     "test": "yarn build && jest",
     "lint": "eslint src/* test/*",
@@ -17,11 +17,11 @@
   "size-limit": [
     {
       "limit": "2.99 KB",
-      "path": "dist/jalaliday.umd.min.js"
+      "path": "dist/antd-dayjs-jalali.umd.min.js"
     },
     {
       "limit": "2.99 KB",
-      "path": "dist/jalaliday.cjs.min.js"
+      "path": "dist/antd-dayjs-jalali.cjs.min.js"
     }
   ],
   "pre-commit": [
@@ -44,17 +44,19 @@
   },
   "keywords": [
     "dayjs",
+    "antd",
     "date",
     "time",
+    "calander",
     "immutable",
     "moment",
     "jalali"
   ],
-  "author": "Ahad Birang",
+  "author": "Yumcoder",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alibaba-aero/jalaliday.git"
+    "url": "https://github.com/YumcoderCom/antd-dayjs-jalali.git"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
