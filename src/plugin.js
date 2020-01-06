@@ -146,7 +146,15 @@ export default (o, Dayjs, dayjs) => {
       this.$d.setDate(gd)
       return this
     }
+
     switch (unit) {
+      case C.W:
+        {
+          const gap = 7 - dayjs.$fdow
+          const WModifier = ((this.$W + gap) % 7) - ((int + gap) % 7)
+          instanceFactory(this.$jD - WModifier, this.$jM)
+        }
+        break
       case C.DATE:
       case C.D:
         instanceFactory(int, this.$jM)
@@ -262,6 +270,13 @@ export default (o, Dayjs, dayjs) => {
       return oldMonth.bind(this)(input)
     }
     return this.$g(input, '$jM', C.M)
+  }
+
+  proto.day = function (input) {
+    if (!$isJalali(this)) {
+      return oldMonth.bind(this)(input)
+    }
+    return this.$g(input, '$W', C.W)
   }
 
   proto.date = function (input) {
