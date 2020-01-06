@@ -60,13 +60,14 @@ class WebpackDayjsPlugin {
       const initFilePath = path.resolve(__dirname, 'init-dayjs.js')
       let initContent = `var dayjs = require( 'dayjs');`
       initContent += `var jalali = require('antd-dayjs-jalali');`
+      this.plugins.forEach((plugin) => {
+        initContent += `var ${plugin} = require( 'dayjs/plugin/${plugin}');`
+      })
+
       initContent += `dayjs.extend(jalali);`
       initContent += `dayjs.calendar('jalali');`
       initContent += `dayjs.locale('fa');`
 
-      this.plugins.forEach((plugin) => {
-        initContent += `var ${plugin} = require( 'dayjs/plugin/${plugin}');`
-      })
       this.plugins.forEach((plugin) => {
         initContent += `dayjs.extend(${plugin});`
       })
