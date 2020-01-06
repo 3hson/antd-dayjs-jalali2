@@ -1,6 +1,6 @@
 {
   "name": "antd-dayjs-jalali",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "antd persian (Jalali, Khorshidi) Day.js calander",
   "main": "dist/antd-dayjs-jalali.cjs.min.js",
   "web": "dist/antd-dayjs-jalali.umd.min.js",
