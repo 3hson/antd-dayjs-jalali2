@@ -151,7 +151,7 @@ export default (o, Dayjs, dayjs) => {
       case C.W:
         {
           const gap = 7 - dayjs.$fdow
-          const WModifier = ((this.$W + gap) % 7) - ((int + gap) % 7)
+          const WModifier = ((this.$W + gap) % 7) - int
           instanceFactory(this.$jD - WModifier, this.$jM)
         }
         break
