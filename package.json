@@ -1,6 +1,6 @@
 {
   "name": "antd-dayjs-jalali",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "antd persian (Jalali, Khorshidi) Day.js calander",
   "main": "dist/antd-dayjs-jalali.cjs.min.js",
   "web": "dist/antd-dayjs-jalali.umd.min.js",
@@ -63,7 +63,7 @@
     "@size-limit/preset-small-lib": "^2.1.1",
     "bili": "^4.8.1",
     "codecov": "^3.5.0",
-    "dayjs": "^1.8.15",
+    "dayjs": "^1.8.19",
     "eslint": "^6.2.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
