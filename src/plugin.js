@@ -40,7 +40,7 @@ export default (o, Dayjs, dayjs) => {
 
   dayjs.$C = 'gregory'
   // First Day Of Week
-  dayjs.$fdow = 6 // 0: sunday, ...
+  // dayjs.$fdow = 6 // 0: sunday, ...
 
   dayjs.calendar = function (calendar) {
     dayjs.$C = calendar
@@ -60,8 +60,7 @@ export default (o, Dayjs, dayjs) => {
     return $isJalali(this)
   }
 
-  dayjs.en.jmonths = 'Farvardin_Ordibehesht_Khordaad_Tir_Mordaad_Shahrivar_Mehr_Aabaan_Aazar_Dey_Bahman_Esfand'.split('_')
-  dayjs.locale('fa', C.fa, true)
+  dayjs.locale(C.fa)
 
   const wrapper = function (date, instance) {
     return dayjs(date, {
@@ -114,7 +113,8 @@ export default (o, Dayjs, dayjs) => {
       const ins = wrapper(new Date(gy, gm - 1, gd), this)
       return isStartOf ? ins : ins.endOf(C.D)
     }
-    const WModifier = (this.$W + (7 - dayjs.$fdow)) % 7
+    const fdow = this.$locale().weekStart || 0
+    const WModifier = (this.$W + (7 - fdow)) % 7
     switch (unit) {
       case C.Y:
         return isStartOf ? instanceFactory(1, 0)
@@ -149,11 +149,7 @@ export default (o, Dayjs, dayjs) => {
 
     switch (unit) {
       case C.W:
-        {
-          const gap = 7 - dayjs.$fdow
-          const WModifier = ((this.$W + gap) % 7) - ((int + gap) % 7)
-          instanceFactory(this.$jD - WModifier, this.$jM)
-        }
+        instanceFactory(this.$jD - ((this.$W + 1) % 7) + int, this.$jM)
         break
       case C.DATE:
       case C.D:
@@ -208,7 +204,7 @@ export default (o, Dayjs, dayjs) => {
     }
     const str = formatStr || C.FORMAT_DEFAULT
     const locale = localeObject || this.$locale()
-    const { jmonths } = locale
+    const months = locale.jmonths || locale.months
     return str.replace(C.REGEX_FORMAT, (match) => {
       if (match.indexOf('[') > -1) return match.replace(/\[|\]/g, '')
       switch (match) {
@@ -221,9 +217,9 @@ export default (o, Dayjs, dayjs) => {
         case 'MM':
           return $padStart(this.$jM + 1, 2, '0')
         case 'MMM':
-          return jmonths[this.$jM].slice(0, 3)
+          return months[this.$jM].slice(0, 3)
         case 'MMMM':
-          return jmonths[this.$jM]
+          return months[this.$jM]
         case 'D':
           return String(this.$jD)
         case 'DD':
