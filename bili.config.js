@@ -1,7 +1,7 @@
 module.exports = {
   output: {
-    fileName: 'jalaliday.[format][min].js',
-    moduleName: 'jalaliday',
+    fileName: 'antd-dayjs-jalali.[format][min].js',
+    moduleName: 'antd-dayjs-jalali',
     format: [
       'cjs-min',
       'es',
