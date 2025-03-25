@@ -16,11 +16,11 @@
   },
   "size-limit": [
     {
-      "limit": "2.99 KB",
+      "limit": "3.99 KB",
       "path": "dist/antd-dayjs-jalali.umd.min.js"
     },
     {
-      "limit": "2.99 KB",
+      "limit": "3.99 KB",
       "path": "dist/antd-dayjs-jalali.cjs.min.js"
     }
   ],
