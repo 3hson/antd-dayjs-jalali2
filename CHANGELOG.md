@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 2.0.0 (2025-03-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* in previous version using jalaliday cause to change dayjs default locale to `fa`
+from now on users must change locale if needed
+
+### Features
+
+* support toArray proto for jalali calendar ([e7b9c9e](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/e7b9c9ec1a351208f96a02ae3957f6612c9f070f))
+* **relative times:** adds relative time strings for fa locale ([e961a1f](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/e961a1f585330f24b319c98ea97008b41d117070))
+* **startOf:** Support customizable first day of week ([6e3dac4](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/6e3dac4c6846c076adc14d9c5b1f9fa588c75398))
+
+
+### Bug Fixes
+
+* **$set:** prevent date from exceeding month limit ([#19](https://github.com/YumcoderCom/antd-dayjs-jalali/issues/19)) ([66c8e76](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/66c8e765901dde2a4901ab23dc6bd95d33fe326f))
+* **add-month:** prevent exceed from days of month ([9835799](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/9835799c757b3db8cade2dbedef7d126216dcd7e))
+* **calendar:** 1403 leap year ([3f7353a](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/3f7353a71bf7cba2a5e802162502dca34ad46bde))
+* support dayjs 1.8.15 ([cc5754c](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/cc5754c87d6183fae890b538b1073bf1a0a5a434))
+* **date:** rename day function to date ([dfed41e](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/dfed41eca079ac289634b7b544e4ca17bfdbe8d9))
+* **installation command:** changes yard to yarn ([13eec41](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/13eec4167ecb934be26785a8179f53055d523917))
+* **linter errors:** fixes linter errors on plugin, reliable and test files ([a209460](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/a2094604daedeea6772d7d3d7547e36189f726dd))
+* **plugin:** refactor add and startOf functionality ([8435a56](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/8435a560cdf83a5fce34a7f9cc92960664875a3b)), closes [#8](https://github.com/YumcoderCom/antd-dayjs-jalali/issues/8)
+* **plugin:** support dayjs^1.8.9 ([31bd189](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/31bd189b5b03d7fce1be80017a78ff5d2fc3c2ad)), closes [#6](https://github.com/YumcoderCom/antd-dayjs-jalali/issues/6)
+* **relativeTimes:** adds the object to the fa constant ([e280f2a](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/e280f2aff5004487da44738568e88bd0082b1e49))
+* **toArray:** override toArray if exists ([00c6548](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/00c6548d7de68566027d416b141a19b61f0268c7))
+* kepp dayjs default locale ([b152b60](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/b152b6051cfeb183b225daa812a3a98cae4fc8f5))
+* wrap dayjs functions to keep calendar on new instances ([f10e9fe](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/f10e9fe2aaa6f27c4b59241dc7393d9b43082ec6))
+* **utils.js:** Fix typo in monthDiff function ([df0678e](https://github.com/YumcoderCom/antd-dayjs-jalali/commit/df0678e1c5bdae6ef41f3ecc85e4acbe910e2241))
+
 ### [1.0.28](https://github.com/YumcoderCom/antd-dayjs-jalali/compare/v1.0.27...v1.0.28) (2020-01-09)
 
 ### [1.0.27](https://github.com/YumcoderCom/antd-dayjs-jalali/compare/v1.0.26...v1.0.27) (2020-01-09)
