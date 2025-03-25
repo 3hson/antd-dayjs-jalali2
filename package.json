@@ -1,5 +1,5 @@
 {
-  "name": "antd-dayjs-jalali",
+  "name": "antd-dayjs-jalali2",
   "version": "2.0.0",
   "description": "antd persian (Jalali, Khorshidi) Day.js calander",
   "main": "dist/antd-dayjs-jalali.cjs.min.js",
@@ -52,11 +52,11 @@
     "moment",
     "jalali"
   ],
-  "author": "Yumcoder",
+  "author": "3hson",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YumcoderCom/antd-dayjs-jalali.git"
+    "url": "https://github.com/3hson/antd-dayjs-jalali2.git"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
